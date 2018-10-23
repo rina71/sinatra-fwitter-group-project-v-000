@@ -1,4 +1,4 @@
 Welcome,<%= @user.username %>
 <% @tweets.each do |tweet| %>
-<br><a href="/tweets/<%=tweet.id%>"><%= tweet.content binding.pry%></a></br>
+<br><a href="/tweets/<%=tweet.id%>"><%= tweet.content %></a></br>
 <% end %>
