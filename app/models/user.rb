@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
     User.all.each{|user| user.username.slug = slug}
   end
 
-  def slug
+  def self.slug
     self.username.downcase.gsub(' ','-')
   end
 end
