@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   has_secure_password
   def find_by_slug(slug)
     User.all.each{|user| user.username.slug = slug}
-    name = s
   end
 
   def slug
