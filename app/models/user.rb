@@ -3,8 +3,8 @@ class User < ActiveRecord::Base
   has_many :tweets
   has_secure_password
   def self.find_by_slug(slug)
-
-    a = User.all.map{|user| user.slug == slug}
+    User.all.each do |user| 
+      if user.slug == slug
     binding.pry
     a[0]
   end
