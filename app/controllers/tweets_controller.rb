@@ -25,6 +25,10 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find_by_id(params[:id])
     erb :"/tweets/show_tweet"
   end
+  
+  post '/tweets/:id' do
+    @tweet = Tweet.find_by_id(params[:id])
+  end
 
   post '/tweets/:id/delete' do
     Tweet.find_by_id(params[:id]).delete
@@ -52,9 +56,6 @@ class TweetsController < ApplicationController
     end
   end
 
-  post '/tweets/:id' do
-    @tweet = Tweet.find_by_id(params[:id])
-  end
 
 
 
