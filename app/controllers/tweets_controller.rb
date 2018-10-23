@@ -32,6 +32,7 @@ class TweetsController < ApplicationController
 
   post '/tweets/:id' do
     @tweet = Tweet.find_by_id(params[:id])
+    
   end
 
   post '/tweets/:id/delete' do
