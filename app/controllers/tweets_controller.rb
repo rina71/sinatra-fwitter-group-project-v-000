@@ -10,7 +10,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets/new' do
-    if params[:content]= ""
+    if params[:content] == ""
       binding.pry
     redirect to "/tweets/new"
   else
