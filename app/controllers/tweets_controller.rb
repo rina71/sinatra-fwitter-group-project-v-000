@@ -42,6 +42,7 @@ class TweetsController < ApplicationController
      redirect to "/tweets"
    else
      redirect to "/login"
+   end
   end
 
   get "/tweets/:id/edit" do
