@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   def self.find_by_slug(slug)
 
     a = User.all.map{|user| user.slug == slug}
+    binding.pry
     a[0]
   end
 
