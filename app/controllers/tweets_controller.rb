@@ -49,7 +49,10 @@ class TweetsController < ApplicationController
   end
 
   patch "/tweets/:id/edit" do
-    
+    tweet = Tweet.find_by_id(params[:id])
+    tweet.content = params[:content]
+    tweet.save
+
     redirect to "/tweets/:id"
   end
 
