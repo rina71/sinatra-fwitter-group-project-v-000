@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_secure_password
   def self.find_by_slug(slug)
     User.find.each do |user|
-      
+      binding.pry
       user.slug == slug
 
     end
