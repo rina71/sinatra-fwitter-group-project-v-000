@@ -1,5 +1,14 @@
+<h2><%= @tweet.content %></h2>
 <form action="/tweets/<%=@tweet.id%>/edit" method="post">
 <h2><%= @tweet.content %></h2>
 <input type="submit" value="Delete Tweet">
 <input type="submit" value="Edit Tweet">
 </form>
+
+<% basket.each do |b| %>
+ <form action="basket/delete" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="id" value=<%= b.id %>>
+    <button type="submit">Delete</button>
+ </form>
+<% end %>
