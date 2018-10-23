@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
     User.find.each do |user|
       user.slug == slug
 
-    end      
+    end
   end
 
   def slug
