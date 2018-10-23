@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   has_many :tweets
   has_secure_password
   def find_by_slug(slug)
+    binding.pry
     User.all.each{|user| user.username.slug = slug}
   end
 
