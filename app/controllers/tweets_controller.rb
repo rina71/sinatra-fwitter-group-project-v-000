@@ -15,7 +15,6 @@ class TweetsController < ApplicationController
       @tweet = Tweet.create(:content=>params[:content])
       @tweet.user_id = current_user.id
       @tweet.save
-      binding.pry
       redirect to "/tweets"
     end
   end
@@ -63,7 +62,7 @@ end
     if logged_in?
       @user = User.find_by_id(session[:user_id])
       @tweets = Tweet.all
-
+      
     erb :"/tweets/tweets"
     else
       redirect to '/login'
