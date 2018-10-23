@@ -11,9 +11,10 @@ class TweetsController < ApplicationController
 
   post '/tweets/new' do
     if params[:content]= ""
+      binding.pry
     redirect to "/tweets/new"
   else
-    binding.pry
+
     Tweet.create(:content=>params[:content]).user_id = current_user.id
     redirect to "/tweets"
   end
