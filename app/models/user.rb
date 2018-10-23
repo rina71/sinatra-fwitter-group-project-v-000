@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
   end
 
   def slug
-    self.username.g_sub(' ','-')
+    self.username.gsub(' ','-')
   end
 end
