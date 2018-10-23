@@ -33,7 +33,7 @@ class TweetsController < ApplicationController
 
   end
 
-  post '/tweets/:id/delete' do
+  delete '/tweets/:id/delete' do
     Tweet.find_by_id(params[:id]).delete
   end
 
