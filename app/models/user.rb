@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   def self.find_by_slug(slug)
     User.find.each do |user|
       user.slug == slug
-
+binding.pry
     end
   end
 
